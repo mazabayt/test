@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta charset = "utf-8">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/css/suggestions.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/js/jquery.suggestions.min.js"></script>
+</head>
+<body>
+<p>Введите необходимый адрес или почтовый индекс</p>
+<input id = "suggest_address_input" type = "text" placeholder = "Введите адрес" autocomplete = "off" autocorrect = "off" autocapitalize = "off" spellcheck = "false" class = "suggestions-input" style = "box-sizing: border-box; max-width: 50%;">
+
+<script>
+    $("#suggest_address_input").suggestions(
+	{
+        token: "e0999dffd1f019433dd83b7baca7b958913d491a",
+        type: "ADDRESS",
+        onSelect: function(suggestion) 
+		{
+            console.log(suggestion);
+        }
+    });
+</script>
+
+<p>
+	ответы:<br>
+		1. Чтобы успешно и чётко контролировать работу с клиентами, упорядочивать и планировать её;<br>
+		2. Воронка продаж - так называемый путь клиента от получения им информации о продукте и заинтересованность оным к завершению сделки, то есть покупки;<br>
+		3. Веб-хук - функционал для обратной связи между сервисами, например, уведомление CRM о поступившем платеже;<br>
+			по поводу ограничений нашёл следующее: "Почта <...> её особенность в том, что новые письма подгружаются раз в 20 минут, и если вам нужна оперативная переписка с клиентом по почте, <...> приходится дополнительно пользоваться сторонним почтовым сервисом".
+</p>
+</body>
+</html>
